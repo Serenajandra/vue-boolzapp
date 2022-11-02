@@ -175,6 +175,11 @@ createApp({
     
  
     methods: {
-    
+
+        showAvatar(){
+            this.contacts.visible = true
+            
+        },
+
     },
 }).mount("#app");
