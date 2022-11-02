@@ -18,30 +18,31 @@ img{
     height: 100vh;
     padding-top: 10vh;
   /* DEBUG */
-    background-color: rgb(198, 127, 28);
+    background-color:rgb(244, 244, 221);
 }
 .app-container{
     display: flex;
     width: 80%;
     height: 80vh;
     margin: 0 auto;
+    background-color: azure;
+}
+a, i{
+    color: gray;
+    padding: 0.5rem
 }
 
 /* MENU LATERALE */
 
 .side-menu{
     width: 40%;
-    /* max-height: 90vh; */
-    /* DEBUG */
-    border: 1px solid black;
-    background-color: aquamarine;
 }
 
 /* MENU HEADER */
 .header-menu{
     width: 100%;
     /* height: 10vh; */
-    background-color: beige;
+    background-color: azure;
 
 }
 .active_item{
@@ -73,16 +74,27 @@ img{
 .main-menu{
 width: 100%;
 height: 80vh;
+
 }
 
 .notifiche{
+    display: flex;
     background-color: darkturquoise;
     width: 100%;
     min-height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.fa-bell-slash{
+    background-color: white;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: darkturquoise;
 }
 
 .search-item{
- line-height: 1.5rem;
+ display: flex;
 }
 
 .chat-list{
@@ -111,19 +123,42 @@ height: 80vh;
 main{
     width: 60%;
     height: 100%;
-    overflow-y: scroll;
+    
     background-color: bisque;
 }
 
 .avatar-active-card{
-    height: 20%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    padding: .5rem;
     align-items: center;
-    background-color: beige;
+    background-color: azure;
+    border: 1px solid black;
 }
 .opened-chat{
     width: 100%;
-    height: 80%;
+    height: 78%;
+    overflow-y: scroll;
+}
+
+Footer{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid black;
+    background-color: beige;
+    justify-content: space-around;
+    align-items: center;
+}
+.write-message{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+input{
+    border-radius: 5px;
+    width: 100%;
+    line-height: 1.2rem;   
 }
