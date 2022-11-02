@@ -59,13 +59,14 @@
                         <input type="text" id="search">
                     </div>
                     <ul class="chat-list">
-                        <li>
+                        <li v-for="thisAvatar in contacts">
                             <div class="avatar-in-list">
                                 <div class="item-container">
-                                    <img class="avatar_img" src="img/avatar_1.jpg" alt="">
+                                    <img class="avatar_img" 
+                                    :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
                                     <div class="avatar-text">
-                                        <h4>Name</h4>
-                                        <p>Ultimo messaggio inviato</p>
+                                        <h4>{{thisAvatar.name}}</h4>
+                                        <p>{{thisAvatar.messages[0].message}}</p>
                                     </div>
                                 </div>
                                 <div class="date">ora</div>
