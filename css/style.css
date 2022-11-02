@@ -10,50 +10,55 @@ body{
     font-family: 'Lato', sans-serif;
     background-color: aqua
 }
-
 img{
     width: 100%;
 }
-
 .bg_container{
     width: 100%;
     height: 100vh;
+    padding-top: 10vh;
   /* DEBUG */
     background-color: rgb(198, 127, 28);
 }
-
-.app_contanier{
-    width: 70%;
-    height: 90h;
+.app-container{
+    display: flex;
+    width: 80%;
+    height: 80vh;
     margin: 0 auto;
-    /* DEBUG */
-    background-color:rgb(135, 222, 151);
 }
+
+/* MENU LATERALE */
 
 .side-menu{
     width: 40%;
-    max-height: 90vh;
+    /* max-height: 90vh; */
     /* DEBUG */
     border: 1px solid black;
     background-color: aquamarine;
 }
 
+/* MENU HEADER */
+.header-menu{
+    width: 100%;
+    /* height: 10vh; */
+    background-color: beige;
+
+}
 .active_item{
     display: flex;
     justify-content: space-between;
 }
-
-.card-avatar{
+.owner-card{
     display: flex;
     align-items: center;
-    max-width: 50%;
+    /* max-width: 50%; */
     /* DEBUG */
-    background-color: bisque;
     border: 1px solid black;
 }
 .avatar_img{
-    width: 20%;
+    width: 3rem;
     border-radius: 50%;
+    object-fit: contain;
 }
 .right_menu{
     max-width: 50%;
@@ -61,4 +66,64 @@ img{
     display: flex;
     justify-content: space-between;
     padding: .5rem;
+}
+
+/* MAIN MENU */
+
+.main-menu{
+width: 100%;
+height: 80vh;
+}
+
+.notifiche{
+    background-color: darkturquoise;
+    width: 100%;
+    min-height: 10vh;
+}
+
+.search-item{
+ line-height: 1.5rem;
+}
+
+.chat-list{
+    overflow-y: scroll;
+}
+
+.item-container{
+    display: flex;
+    justify-content: space-between;
+}
+.avatar-text{
+    margin: 0 1rem;
+}
+
+.avatar-in-list{
+    display: flex;
+    align-items: center;
+    /* DEBUG */
+    border: 1px solid black;
+    justify-content: space-around;
+    height: 10vh;
+}
+
+
+/* MAIN */
+main{
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: bisque;
+}
+
+.avatar-active-card{
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+    background-color: beige;
+}
+.opened-chat{
+    width: 100%;
+    height: 80%;
 }

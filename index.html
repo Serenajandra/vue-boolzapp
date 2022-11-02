@@ -15,13 +15,13 @@
 </head>
 <body>
     <div id="app" class="bg_container">
-        <div class="app_container">
+        <div class="app-container">
             <!-- Menu-laterale -->
             <nav class="side-menu">
                 <!-- header -->
-                <header>
+                <div class="header-menu">
                     <div class="active_item">
-                        <div class="card-avatar">
+                        <div class="owner-card">
                             <img class="avatar_img" src="img/avatar_1.jpg" alt="">
                             <h4>Name</h4>
                         </div>
@@ -31,24 +31,84 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                </header>
+                </div>
                 <!-- /header -->
             
                 <!-- Main-menu -->
                 <div class="main-menu">
-                    <div class="notifiche"></div>
-                    <div class="search"></div>
+                    <div class="notifiche">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p>Attiva notifiche facebook</p>
+                    </div>
+                    <div class="search-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <label for="search"></label>
+                        <input type="text" id="search">
+                    </div>
                     <ul class="chat-list">
                         <li>
-                            <div class="card-avatar">
+                            <div class="avatar-in-list">
+                                <div class="item-container">
+                                    <img class="avatar_img" src="img/avatar_1.jpg" alt="">
+                                    <div class="avatar-text">
+                                        <h4>Name</h4>
+                                        <p>Ultimo messaggio inviato</p>
+                                    </div>
+                                </div>
+                                <div class="date">ora</div>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar-in-list">
                                 <img class="avatar_img" src="img/avatar_1.jpg" alt="">
-                                <h4>Name</h4>
+                                <div>
+                                    <h4>Name</h4>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date">ora</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar-in-list">
+                                <img class="avatar_img" src="img/avatar_1.jpg" alt="">
+                                <div>
+                                    <h4>Name</h4>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date">ora</div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
-               <!-- /Menu-laterale -->
+         <!-- /Menu-laterale -->
+         <!-- Menu chat aperta -->
+            <main>
+               <header>
+                   <div class="avatar-active-card">
+                        <div class="item-container">
+                            <img class="avatar_img" src="img/avatar_1.jpg" alt="">
+                            <div class="avatar-text">
+                                <h4>Name</h4>
+                                <p>Ultimo accesso <span class="date">ora</span> </p>
+                            </div>
+                        </div>
+                       <div class="menu-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                       </div>
+                   </div>
+               </header>
+               <div class="opened-chat">
+
+               </div>
+               <footer>
+                <label for="input-text"></label>
+                <input type="text" id="input-text">
+               </footer>
+            </main>
         </div>
     </div>
     <script src="js/script.js"></script>
