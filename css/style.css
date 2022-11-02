@@ -8,7 +8,6 @@
 /* COMMONS */
 body{
     font-family: 'Lato', sans-serif;
-    background-color: aqua
 }
 img{
     width: 100%;
@@ -52,9 +51,6 @@ a, i{
 .owner-card{
     display: flex;
     align-items: center;
-    /* max-width: 50%; */
-    /* DEBUG */
-    border: 1px solid black;
 }
 .avatar_img{
     width: 3rem;
@@ -142,6 +138,30 @@ main{
     overflow-y: scroll;
 }
 
+.sent{
+    background-color: lightgreen;
+    min-width: 20%;
+    max-width: 45%;
+    border-radius: 5px;
+    position: relative;
+    left: 350px;
+    margin-top: 10px;
+    padding: .5rem;
+}
+
+.received{
+    background-color: white;
+    min-width: 20%;
+    max-width: 45%;
+    border-radius: 5px;
+    position: relative;
+    left: 25px;
+    margin-top: 10px;
+    padding: .5rem;
+}
+
+
+/* FOOTER */
 Footer{
     display: flex;
     height: 10%;
