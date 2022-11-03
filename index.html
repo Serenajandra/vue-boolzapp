@@ -18,7 +18,7 @@
         <div class="app-container">
             <!-- Menu-laterale -->
             <nav class="side-menu">
-                <!-- header -->
+                <!-- header laterale -->
                 <div class="header-menu">
                     <div class="active_item">
                         <div class="owner-card">
@@ -40,9 +40,10 @@
                 </div>
                 <!-- /header -->
             
-                <!-- Main-menu -->
+                <!-- Main-menu laterale -->
                 <div class="main-menu">
-                    <div class="notifiche">
+                    <!-- notifications -->
+                    <section class="notifiche">
                         <a href="">
                             <i class="fa-solid fa-bell-slash"></i>
                             </a>
@@ -50,16 +51,23 @@
                             <p>Ricevi notifiche di nuovi messaggi</p>   
                             <a href="">Attiva notifiche facebook</a>
                         </div>    
-                    </div>
-                    <div class="search-item">
+                    </section>
+                    <!-- /notifications -->
+                    <!-- Search -->
+                    <section class="search-item">
                         <a href="">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
-                        <label for="search"></label>
-                        <input type="text" id="search">
-                    </div>
+                        <div class="search-field">
+                            <label for="search"></label>
+                            <input type="text" id="search">
+                        </div>
+                    </section>
+                    <!-- /Search -->
+
+                    <!-- chat-list -->
                     <ul class="chat-list">
-                        <li v-for="thisAvatar in contacts" @click="showAvatar">
+                        <li v-for="thisAvatar in contacts" :class="activeItem">
                             <div class="avatar-in-list">
                                 <div class="item-container">
                                     <img class="avatar_img" 
@@ -74,21 +82,22 @@
                             </div>
                         </li>
                     </ul>
+                    <!-- /chat-list -->
                 </div>
             </nav>
-         <!-- /Menu-laterale -->
+         <!-- /Main Menu-laterale -->
          <!-- Menu chat aperta -->
             <main>
-               <header>
-                   <ul class="avatar-active-card">
-                        <li v-for="thisAvatar in contacts" :class="thisAvatar.visible = true ? `active` : ``">
-                            <div class="item-container">
-                                <img class="avatar_img" :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
-                                <h4>{{thisAvatar.name}}</h4>
-                                <p>Ultimo accesso <span class="date">ora</span> </p>
+                <header>
+                    <div class="avatar-active-card">
+                        <div>
+                            <div class="item-container" :class="activeItem">
+                                <img class="avatar_img" :src="`img/avatar${contacts[activeItem].avatar}.jpg`" alt="">
+                                <h4>{{contacts[activeItem].name}}</h4>
                             </div>
-                        </li>
-                       <div class="menu-icon">
+                            <p>Ultimo accesso <span class="date">ora</span> </p>
+                        </div> 
+                        <div class="menu-icon">
                             <a href="">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
@@ -98,13 +107,24 @@
                             <a href="">
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </a>
-                       </div>
-                    </ul>
-               </header>
-               <div class="opened-chat" v-for="allMessages in contacts ">
-                <p class="sent">{{allMessages.messages}}</p>
-                <p class="received">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus rerum necessitatibus doloremque, ratione ad beatae nemo quia eaque id vero sapiente! Possimus dignissimos corrupti id minus provident consequatur explicabo in.</p>
-               </div>
+                        </div>
+                     </div>
+                </header>
+               <!-- /header -->
+               <!-- Opened-chat -->
+               <section class="opened-chat" >
+                    <div class="message sent" v-for="userMessage in contacts[activeItem].messages" :class="userMessage.status">
+                        <div class="message-box" >
+                            <p class="message-text" >{{userMessage.message}}</p>
+                            <p class="time">time</p>
+                        </div>
+                    </div>
+
+                    <p class="received">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus rerum necessitatibus doloremque, ratione ad beatae nemo quia eaque id vero sapiente! Possimus dignissimos corrupti id minus provident consequatur explicabo in.</p>
+               </section>
+               <!-- /Opened-chat -->
+
+               <!-- Footer -->
                <footer>
                     <a href="">
                         <i class="fa-regular fa-face-smile"></i>

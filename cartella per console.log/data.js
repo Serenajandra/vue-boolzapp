@@ -1,4 +1,5 @@
-contacts: [
+
+const contacts = [
     {
         name: 'Michele',
         avatar: '_1',
@@ -161,3 +162,6 @@ contacts: [
         ],
     }
 ]
+
+console.log(contacts[7]messages[].status)
+// contacts[activeItem].messages.stas

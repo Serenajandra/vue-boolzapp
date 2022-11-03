@@ -6,6 +6,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            activeItem: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -182,4 +183,6 @@ createApp({
         },
 
     },
+
+    
 }).mount("#app");
