@@ -163,5 +163,5 @@ const contacts = [
     }
 ]
 
-console.log(contacts[7]messages[].status)
+console.log(contacts[0])
 // contacts[activeItem].messages.stas
