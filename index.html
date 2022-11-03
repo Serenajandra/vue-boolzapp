@@ -130,7 +130,8 @@
 
                     <div class="write-message">
                         <label for="input-text"></label>
-                        <input type="text" id="input-text">
+                        <input type="text" id="input-text" v-model="newUserMessage"
+                        @keyup.enter="pushMessage(activeItem)">
                     </div>
                     <a href="">
                         <i class="fa-solid fa-microphone"></i>
