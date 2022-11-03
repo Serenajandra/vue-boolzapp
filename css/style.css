@@ -5,29 +5,59 @@
     padding: 0;
 }
 
+/* VARIABILES */
+:root {
+    --disclamer-link-color: #4f7485;
+    --disclamer-icon-bg-color: #f2fbff;
+    --search-text-color: #b6b9bb;
+    --contact-border: #f5f5f5;
+    --contact-hover: #f4f5f5;
+    --contact-active: #e9ebeb;
+
+    --footer-bg-color: #f3eeea;
+    --sent-message: #d5f9ba;
+    --bell-color: #8edafc;
+    --header-bg-color: #eaeaea;
+    --icons-color: #b1b1b1;
+    --gradient-bg-color-green: #009688;
+    --gradient-bg-color-beige: #dddbd1;
+    --gradient-bg-color-light: #d2dbdc;
+  }
+
 /* COMMONS */
-body{
+html{
     font-family: 'Lato', sans-serif;
+    font-size: 100%;
 }
+
 img{
     width: 100%;
 }
+
 .bg_container{
     width: 100%;
     height: 100vh;
-    padding-top: 2%;
-  /* DEBUG */
-    background-color:rgb(213, 213, 195);
+    position: relative;
+    background-image: linear-gradient(to bottom, 
+    var(--gradient-bg-color-green) 0%, 
+    var(--gradient-bg-color-green) 20vh, 
+    var(--gradient-bg-color-beige) 20vh, 
+    var(--gradient-bg-color-light) 100%);
 }
+
 .app-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     width: 80%;
     height: 90vh;
     margin: 0 auto;
-    background-color: azure;
 }
+
 a, i{
-    color: gray;
+    color: var(--icons-color);
     padding: 0.5rem
 }
 
@@ -35,10 +65,14 @@ input{
     border-radius: 5px;
     width: 100%;
     line-height: 1.2rem;
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
-    border-top: none;
-    border-bottom: 1px solid gray;   
+    border : none;
+    background-color: white;  
+}
+
+.avatar_img{
+    width: 3rem;
+    border-radius: 50%;
+    object-fit: contain;
 }
 
 /* UTILITIES */
@@ -59,24 +93,22 @@ input{
 /* HEADER LATERALE */
 .header-menu{
     width: 100%;
-    /* height: 10vh; */
-    background-color: azure;
-
+    height: 10%;
+    background-color: var(--header-bg-color);
 }
-.active_item{
+
+/* .active_item,  */
+.owner-section{
     display: flex;
     justify-content: space-between;
 }
+
 .owner-card{
     display: flex;
     align-items: center;
 }
-.avatar_img{
-    width: 3rem;
-    border-radius: 50%;
-    object-fit: contain;
-}
-.right_menu{
+
+.header-icons{
     max-width: 50%;
     min-width: 20%;
     display: flex;
@@ -86,87 +118,98 @@ input{
 
 /* MAIN MENU */
 
-.main-menu{
-width: 100%;
-height: 80vh;
-
+.left-main-menu{
+    width: 100%;
+    height: 90%;
 }
 
-.notifiche{
+.notifications{
     display: flex;
-    background-color: darkturquoise;
+    background-color:var(--bell-color);
     width: 100%;
-    min-height: 10vh;
+    height: 10%;
     justify-content: space-around;
     align-items: center;
 }
+
 .fa-bell-slash{
     background-color: white;
     border-radius: 50%;
     padding: 1rem;
     font-size: 1.5rem;
-    color: darkturquoise;
+    color: var(--bell-color);
+}
+.notifications-btn{
+    color: #6b7376;;
 }
 
-.search-item{
+.search-section{
  display: flex;
+ width: 100%;
+ height: 8%;
+ background-color: #f3f3f3;
+ justify-content: space-around;
 }
 
 .search-field{
     margin: 0.8rem auto;
     width: 80%;
-
 }
 
 .chat-list{
     overflow-y: auto;
-    max-height:80% ;
-}
-
-.item-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.avatar-text{
-    margin: 0 1rem;
+    width: 100%;
+    height: calc(100% - 18%);
+    flex-wrap: 1;
+    background-color: #f3f3f3;
 }
 
 .avatar-in-list{
     display: flex;
     align-items: center;
-    /* DEBUG */
     border-bottom: 1px solid gray;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 10vh;
 }
+.avatar-container{
+    display: flex;
+    align-items: center;
+}
 
+.avatar-text{
+    margin: 0 1rem;
+}
+
+/* HEADER-RIGHT */
+header{
+    width: 100%;
+    height: 10%;
+}
+.avatar-active-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    align-items: center;
+    background-color: var(--header-bg-color);
+}    
 
 /* MAIN */
 main{
     width: 60%;
     height: 100%;
-    
-    background-color: bisque;
+    background-color: #D4CCC6;
 }
 
-.avatar-active-card{
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem;
-    align-items: center;
-    background-color: azure;
-    border: 1px solid black;
-}
 .opened-chat{
     width: 100%;
-    height: 78%;
+    height: 80%;
     overflow-y: scroll;
 }
 
 .sent{
-    background-color: lightgreen;
+    background-color: var(--sent-message);
     min-width: 20%;
     max-width: 45%;
     border-radius: 5px;
@@ -194,8 +237,7 @@ Footer{
     height: 10%;
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid black;
-    background-color: beige;
+    background-color: #f3eeea;
     justify-content: space-around;
     align-items: center;
 }
