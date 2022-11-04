@@ -230,8 +230,8 @@ createApp({
         },
 
         filterContacts(){
-            for (let i = 0; i < contacts.length; i++) {
-                const thisperson = contacts[i];
+            for (let i = 0; i < this.contacts.length; i++) {
+                const thisperson = this.contacts[i];
                 // console.log(thisperson.name)
                 if (thisperson.name.includes(this.search)){
                     thisperson.visible = true;
