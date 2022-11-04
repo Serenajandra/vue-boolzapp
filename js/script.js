@@ -236,7 +236,7 @@ createApp({
                 if (thisperson.name.includes(this.search)){
                     thisperson.visible = true;
                 }else{
-                    thisperson.visible = false
+                    thisperson.visible = false;
                 }
                 console.log(thisperson)
             }
