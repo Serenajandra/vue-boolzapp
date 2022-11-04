@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Search -->
+    <section class="search-section">
+        <a href="">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <div class="search-field">
+            <label for="search"></label>
+            <input type="text" id="search" v-model.trim="search" keyup="filterContacts(search)">
+        </div>
+    </section>
+    <!-- /Search -->
+
+    <!-- chat-list -->
+    <ul class="chat-list">
+        <li v-for="(thisAvatar, index) in contacts" :class="activeItem" @click="selectItem(index)" v-show="search.includes(`thisAvatar.name`)">
+            <div class="avatar-in-list" >
+                <div class="avatar-container">
+                    <img class="avatar_img" 
+                    :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
+                    <div class="avatar-text">
+                        <h4>{{thisAvatar.name}}</h4>
+                        <p>{{thisAvatar.messages[0].message}}</p>
+                    </div>
+                </div>
+                <div class="date">{{thisAvatar.messages[0].date}}</div> 
+            </div>
+        </li>
+    </ul>
+    <!-- /chat-list -->
+    
     <script src="data.js"></script>
 </body>
 </html>

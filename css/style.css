@@ -116,7 +116,7 @@ input{
     padding: .5rem;
 }
 
-/* MAIN MENU */
+/* MAIN MENU LATERALE  */
 
 .left-main-menu{
     width: 100%;
@@ -180,11 +180,25 @@ input{
     margin: 0 1rem;
 }
 
+.date{
+    width: 15%;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    color: gray
+}
+
 /* HEADER-RIGHT */
 header{
     width: 100%;
     height: 10%;
 }
+
+.info-access{
+    font-size: 0.7rem;
+    color: gray
+}
+
+
 .avatar-active-card{
     width: 100%;
     height: 100%;
@@ -206,6 +220,13 @@ main{
     width: 100%;
     height: 80%;
     overflow-y: scroll;
+}
+
+.message-date{
+    text-align: end;
+    font-size: 0.7rem;
+    color: gray;
+    padding-top: 0.5rem;
 }
 
 .sent{

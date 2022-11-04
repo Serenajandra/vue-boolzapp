@@ -1,4 +1,4 @@
-
+search = "Ale";
 const contacts = [
     {
         name: 'Michele',
@@ -163,5 +163,17 @@ const contacts = [
     }
 ]
 
-console.log(contacts[0])
+// console.log(contacts[0])
 // contacts[activeItem].messages.stas
+
+for (let i = 0; i < contacts.length; i++) {
+    const thisperson = contacts[i];
+    // console.log(thisperson.name)
+    if (thisperson.name.includes(search)){
+        thisperson.visible = true;
+    }else{
+        thisperson.visible = false
+    }
+    console.log(thisperson)
+}
+ 

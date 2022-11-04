@@ -21,11 +21,13 @@
 // “mar” rimangono solo Marco e Martina)
 
 const {createApp} = Vue;
+const dt = luxon.DateTime;
 createApp({
     data(){
         return{
             activeItem: 0,
             newUserMessage: "",
+            search:"",
 
             contacts: [
                 {
@@ -204,10 +206,11 @@ createApp({
         pushMessage(activeItem){
             // Creo l'oggetto che conterrà il messaggio dell'utente
             const userMessage = {
-                date: ``,
+                date: this.generateDateTime(),
                 message: this.newUserMessage,
                 status: `sent`
             };
+            // if (this.newUserMessage != "") {
             // Pusho il messaggio con l'oggetto che lo contiene
             this.contacts[activeItem].messages.push(userMessage);
             // Ripulisco il campo per scrivere
@@ -216,7 +219,7 @@ createApp({
             setTimeout(() => {
                  // Creo l'oggetto che conterrà la risposta al messaggio delll'utente
                  const answer = {
-                    date: '',
+                    date: this.generateDateTime(),
                     message: 'ok sweety!',
                     status: 'received'
                 };
@@ -224,7 +227,33 @@ createApp({
                 this.contacts[activeItem].messages.push(answer);
             
             }, 1000);
-        }
+        },
+
+        filterContacts(){
+            if (this.contacts.name.includes(search)) {
+                
+            }
+
+
+            // for (let i = 0; i < search.length; i++) {
+            //     const thisLetter = search[i];
+            //     for (let j = 0; j < this.contacts.length; j++) {
+            //         const element = contacts[j];
+            //            if(element.name.includes(thisLetter)){
+
+            //     }
+            // }
+            //     }
+             
+        },
+
+
+        generateDateTime() {
+            return dt
+              .now()
+              .setLocale("it")
+              .toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+          },
         
     },
 
