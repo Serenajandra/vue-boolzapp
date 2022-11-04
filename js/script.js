@@ -230,20 +230,16 @@ createApp({
         },
 
         filterContacts(){
-            if (this.contacts.name.includes(search)) {
-                
+            for (let i = 0; i < contacts.length; i++) {
+                const thisperson = contacts[i];
+                // console.log(thisperson.name)
+                if (thisperson.name.includes(search)){
+                    thisperson.visible = true;
+                }else{
+                    thisperson.visible = false
+                }
+                console.log(thisperson)
             }
-
-
-            // for (let i = 0; i < search.length; i++) {
-            //     const thisLetter = search[i];
-            //     for (let j = 0; j < this.contacts.length; j++) {
-            //         const element = contacts[j];
-            //            if(element.name.includes(thisLetter)){
-
-            //     }
-            // }
-            //     }
              
         },
 

@@ -77,10 +77,11 @@ input{
 
 /* UTILITIES */
 
-/* .active{
+.active{
     display:inline-block;
 }
-.hidden{
+
+/* .hidden{
     display: none;
 } */
 
