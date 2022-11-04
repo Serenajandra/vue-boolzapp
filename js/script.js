@@ -233,7 +233,7 @@ createApp({
             for (let i = 0; i < contacts.length; i++) {
                 const thisperson = contacts[i];
                 // console.log(thisperson.name)
-                if (thisperson.name.includes(search)){
+                if (thisperson.name.includes(this.search)){
                     thisperson.visible = true;
                 }else{
                     thisperson.visible = false

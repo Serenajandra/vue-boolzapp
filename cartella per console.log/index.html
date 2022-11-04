@@ -24,8 +24,7 @@
         <li v-for="(thisAvatar, index) in contacts" @click="selectItem(index)" v-show="thisAvatar.visible" id="contacts">
             <div class="avatar-in-list" >
                 <div class="avatar-container">
-                    <img class="avatar_img" 
-                    :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
+                    <img class="avatar_img" :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
                     <div class="avatar-text">
                         <h4>{{thisAvatar.name}}</h4>
                         <p>{{thisAvatar.messages[0].message}}</p>
