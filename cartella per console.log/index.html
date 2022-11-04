@@ -21,7 +21,8 @@
 
     <!-- chat-list -->
     <ul class="chat-list">
-        <li v-for="(thisAvatar, index) in contacts" @click="selectItem(index)" v-show="thisAvatar.visible" id="contacts">
+        <li v-for="(thisAvatar, index) in contacts" @click="selectItem(index)"
+        :class="activeItem" v-show="thisAvatar.visible">
             <div class="avatar-in-list" >
                 <div class="avatar-container">
                     <img class="avatar_img" :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
