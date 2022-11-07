@@ -233,12 +233,12 @@ createApp({
             for (let i = 0; i < this.contacts.length; i++) {
                 const thisperson = this.contacts[i];
                 // console.log(thisperson.name)
-                if (thisperson.name.includes(this.search)){
+                if (thisperson.name.toLowerCase().includes(this.search.toLowerCase())){
                     thisperson.visible = true;
                 }else{
                     thisperson.visible = false;
                 }
-                console.log(thisperson)
+                // console.log(thisperson) 
             }
              
         },
