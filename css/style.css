@@ -77,6 +77,10 @@ input{
 
 /* UTILITIES */
 
+.pointer{
+    cursor: pointer;
+}
+
 .active{
     display:inline-block;
 }

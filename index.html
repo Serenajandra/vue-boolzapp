@@ -72,7 +72,7 @@
 
                     <!-- chat-list -->
                     <ul class="chat-list">
-                        <li v-for="(thisAvatar, index) in contacts" :class="activeItem" @click="selectItem(index)" v-show="thisAvatar.visible">
+                        <li v-for="(thisAvatar, index) in contacts" :class="activeItem" @click="selectItem(index)" v-show="thisAvatar.visible" class="pointer">
                             <div class="avatar-in-list">
                                 <div class="avatar-container">
                                     <img class="avatar_img" 
