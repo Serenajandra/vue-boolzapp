@@ -79,10 +79,9 @@
                                     :src="`img/avatar${thisAvatar.avatar}.jpg`" alt="">
                                     <div class="avatar-text">
                                         <h4>{{thisAvatar.name}}</h4>
-                                        <p>{{thisAvatar.messages[0].message}}</p>
                                     </div>
                                 </div>
-                                <div class="date">{{thisAvatar.messages[0].date}}</div> 
+                                <div class="date">{{thisAvatar.messages[thisAvatar.messages.length - 1].date}}</div> 
                             </div>
                         </li>
                     </ul>

@@ -238,11 +238,10 @@ createApp({
                 }else{
                     thisperson.visible = false;
                 }
-                // console.log(thisperson) 
+                console.log(thisperson.messages.message) 
             }
              
         },
-
 
         generateDateTime() {
             return dt
@@ -253,5 +252,4 @@ createApp({
         
     },
 
-    
 }).mount("#app");
