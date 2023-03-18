@@ -28,6 +28,7 @@ createApp({
             activeItem: 0,
             newUserMessage: "",
             search:"",
+            isActive: false,
 
             contacts: [
                 {
