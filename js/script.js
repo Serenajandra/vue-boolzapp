@@ -198,6 +198,22 @@ createApp({
  
     methods: {
 
+        // Silenzio le notifiche
+        mute() {
+            const faBell = document.querySelector('.fa-bell');
+            faBell.classList.toggle("hidden");
+
+        // faBell.addEventListener('click', function(){
+           
+        //     if(faBell.classList.contains('hidden')){
+        //       faBell.classList.remove('hidden');
+        //     }else{
+        //       faBell.classList.add('hidden');
+        //     };
+        // });
+    },
+            
+
         selectItem(clickedAvatar){
             // Rendo visibile la chat dell' avatar cliccato
             this.activeItem = clickedAvatar  

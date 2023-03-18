@@ -61,6 +61,10 @@ a, i{
     padding: 0.5rem
 }
 
+a:hover i{
+    color: #03759e;
+}
+
 input{
     border-radius: 5px;
     width: 100%;
@@ -85,9 +89,10 @@ input{
     display:inline-block;
 }
 
-/* .hidden{
+
+.hidden{
     display: none;
-} */
+}
 
 /* MENU LATERALE */
 
@@ -137,16 +142,34 @@ input{
     align-items: center;
 }
 
-.fa-bell-slash{
+.bells-link{
+    position: relative;
+}
+
+.fa-bell-slash, .fa-bell{
     background-color: white;
     border-radius: 50%;
     padding: 1rem;
     font-size: 1.5rem;
     color: var(--bell-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    position: absolute;
+    left: 1.5rem;
+    top: -1.8rem;
+    cursor: pointer;
 }
+
+
+
 .notifications-btn{
     color: #6b7376;;
 }
+.notifications-container:hover .notifications-btn{
+    color: #03759e;
+}
+
 
 .search-section{
  display: flex;
@@ -179,6 +202,10 @@ input{
 .avatar-container{
     display: flex;
     align-items: center;
+}
+
+li:hover .avatar-in-list{
+    background-color: #03759e70;
 }
 
 .avatar-text{

@@ -49,15 +49,21 @@
                 <div class="left-main-menu">
                     <!-- notifiche -->
                     <section class="notifications">
-                        <a href="">
-                            <i class="fa-solid fa-bell-slash"></i>
-                            </a>
-                        <div>
+                        <div class="bells-link">
+                            <div >
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="" @click="mute()">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                        </div>
+                        <div class="notifications-container">
                             <p>Ricevi notifiche di nuovi messaggi</p>   
                             <a class="notifications-btn" href="">Attiva notifiche facebook</a>
                         </div>    
                     </section>
                     <!-- /notifications -->
+
                     <!-- Search -->
                     <section class="search-section">
                         <a href="">
